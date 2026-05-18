@@ -80,8 +80,8 @@ def train(df: pd.DataFrame):
     # Sigmoid calibration gives realistic probability outputs instead
     # of the overconfident raw probabilities from the forest
     rf = RandomForestClassifier(
-        n_estimators=400,
-        max_depth=15,
+        n_estimators=120,
+        max_depth=10,
         min_samples_split=4,
         n_jobs=-1,
         random_state=42,
