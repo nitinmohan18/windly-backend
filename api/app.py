@@ -86,7 +86,7 @@ class PredictionResponse(BaseModel):
     probability: float
 
 
-@app.get('/', tags=['Health'])
+@app.api_route('/', methods=['GET', 'HEAD'], tags=['Health'])
 def health():
     return {'status': 'ok', 'service': 'Windly API v2.0'}
 
